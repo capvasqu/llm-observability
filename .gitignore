@@ -1,0 +1,35 @@
+# === Observability data — NEVER commit ===
+# events.jsonl and the SQLite database hold real measured traffic, and with
+# --capture-bodies they may include prompt and response bodies.
+data/
+*.db
+*.jsonl
+
+# === Secrets ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# === Local machine config ===
+.claude/settings.local.json
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# === Editors / OS ===
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
